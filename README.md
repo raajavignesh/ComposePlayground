@@ -7,13 +7,18 @@
 
 ```
 @Composable
-fun MyFirstText(name: String) { //compose function name should start with uppercase
+fun MyFirstText(name: String) { // compose function name should start with uppercase
     Text(text= "Hello $name")
 }
+
+onCreate() {
+    setContent { // used to set the composable view in screen
+        Theme {
+            MyFirstText("RV")
+        }
+    }
+}
 ```
-
-setContent{} - used to set the composable view in screen
-
 
 ### Lifecycle of a composable
 * **Initial composition** - When the UI is first created  
